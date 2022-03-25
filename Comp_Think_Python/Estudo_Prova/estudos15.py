@@ -17,4 +17,4 @@ if valor_prestacao <= porcent_salario:
    print(f"Seu empréstimo foi aprovado! o valor dar prestacoes ficaria R${valor_prestacao}")
 
 else:
-    print("Infelizmente nao podemos aprovar o seu emprestimo.")
+    print("Infelizmente nao podemos aprovar o seu emprestimo.") #batata
