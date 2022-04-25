@@ -7,6 +7,7 @@
 #     conta = mandante * multiplo
 #     print(f"{mandante}X{multiplo}=",conta)
 
+# SOMA (NAO TERMINEI....F)
 # contador = 1
 # numeroSoma = int(input("Digite um numero:"))
 #
