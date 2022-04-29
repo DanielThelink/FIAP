@@ -45,7 +45,7 @@
 #     print(f"Zezinho tem {Zezinho} votos")
 #     print(f"Luizinho tem {Luizinho} votos")
 
-# Treinamento Perceptron (formula)
+# Treinamento Perceptron (formula).
     #entradas
 x1 = 25
 x2 = -19
