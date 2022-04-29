@@ -18,27 +18,48 @@
 #     soma = novoNumero + numeroSoma
 #     print(soma)
 
-Huguinho = 0
-Zezinho = 0
-Luizinho = 0
+#Urna eletronica
 
-contador = "s"
-while contador == "s":
-        urna = int(input("Em quem vc deseja votar?[1, 2, 3]"))
+# Huguinho = 0
+# Zezinho = 0
+# Luizinho = 0
 
-        if urna == 1:
-            Huguinho +=1
+# contador = "s"
+# while contador == "s":
+#         urna = int(input("Em quem vc deseja votar?[1, 2, 3]"))
+#
+#         if urna == 1:
+#             Huguinho +=1
+#
+#         elif urna == 2:
+#             Zezinho +=1
+#
+#         elif urna == 3:
+#             Luizinho +=1
+#
+#         contador = input("Deseja continuar votando?")
+#
+# else:
+#     print("FIM DA VOTACAO")
+#     print(f"Huguinho tem {Huguinho} votos")
+#     print(f"Zezinho tem {Zezinho} votos")
+#     print(f"Luizinho tem {Luizinho} votos")
 
-        elif urna == 2:
-            Zezinho +=1
+# Treinamento Perceptron (formula)
+    #entradas
+x1 = 25
+x2 = -19
+x3 = 4
+x4 = -3
 
-        elif urna == 3:
-            Luizinho +=1
+    #pesos
+w1 = 0.8
+w2 = 0.3
+w3 = -1.1
+w4 = -0.9
 
-        contador = input("Deseja continuar votando?")
+b = 0.1
 
-else:
-    print("FIM DA VOTACAO")
-    print(f"Huguinho tem {Huguinho} votos")
-    print(f"Zezinho tem {Zezinho} votos")
-    print(f"Luizinho tem {Luizinho} votos")
+conta = x1 * w1 + x2 * w2 + x3 * w3 + x4 * w4 + b
+
+print(conta)
