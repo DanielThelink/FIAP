@@ -17,7 +17,7 @@
 #
 #     opcao = (input("Deseja continuar [s] ou [n]?"))
 
-
+# laço for
 # laco for "CONTADOR" in range (inicio, fim, incremento)
                 # 1 até 10 somando 1
 for volta in range (1, 10, 1):
