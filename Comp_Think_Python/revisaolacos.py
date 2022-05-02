@@ -1,4 +1,3 @@
-#
 # volta = 1
 # while volta <= 10:
 #     print (volta)
@@ -17,7 +16,9 @@
 #     print(f"o dobro do {numero} é",dobro)
 #
 #     opcao = (input("Deseja continuar [s] ou [n]?"))
-#
-# # laco for "CONTADOR" in range (inicio, fim, incremento)
-# for volta in range (1, 10, 1):
-#     print(volta)
+
+
+# laco for "CONTADOR" in range (inicio, fim, incremento)
+                # 1 até 10 somando 1
+for volta in range (1, 10, 1):
+    print(volta)
