@@ -89,6 +89,7 @@ Z = []
 Z.extend(L + V) # Junta duas listas em uma nova lista "Z"
 print(Z)
 '''
+'''
 #     0    1    2   3   4   5
 L = ["a", "b", "c","d","e","f"]
 
@@ -100,6 +101,7 @@ print(L)
 V = [1, 2, 3, 4, 5, 6]
 del V[2:6] # apaga os elementos da posiçao 2 até a posiçao 6
 print(V)
+'''
 
 
 
