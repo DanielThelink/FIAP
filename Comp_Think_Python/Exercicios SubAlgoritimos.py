@@ -65,11 +65,12 @@ maiornum3(10,11,12)
 # Retorno: 15
 
 def calc (n):
-    for i in range (1,n+1):
+    for n in range (n+1):
         if n % 5 == 0:
-            print(n)
+            print(f"{n},é multiplo de 5")
 
-    else:
-        return
+        else:
+            print(f"{n}, não é multiplo de 5")
 
-calc(13)
+
+calc(16)
