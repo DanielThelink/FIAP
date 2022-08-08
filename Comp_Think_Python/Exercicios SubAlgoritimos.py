@@ -1,9 +1,9 @@
 #1 - zoas
 
-def BOMDIAAA_BOMDIAAA(nome):
-    print(f"BOM DIAA BOM DIAA {nome}, a tropa do serrão te chamou para a piscina!")
-
-BOMDIAAA_BOMDIAAA("Daniel")
+# def BOMDIAAA_BOMDIAAA(nome):
+#     print(f"BOM DIAA BOM DIAA {nome}, a tropa do serrão te chamou para a piscina!")
+#
+# BOMDIAAA_BOMDIAAA("Daniel")
 
 
 # EXERCÍCIOS:
@@ -12,17 +12,18 @@ BOMDIAAA_BOMDIAAA("Daniel")
 # protótipo: saudacao3(msg, nome)
 # Tela: Boa noite Edson, seja bem vindo a FIAP
 
-def saudacao3 (msg,nome):
-    print(f"{msg},{nome}, seja bem vindo a FIAP")
-
-saudacao3("Boa noite","Daniel")
+# def saudacao3 (msg,nome):
+#     print(f"{msg},{nome}, seja bem vindo a FIAP")
+#
+# saudacao3("Boa noite","Daniel")
 
 
 # 2. Crie um procedimento chamado "saudacao4" que passe como parâmetro uma HORA e um NOME e exiba a mensagem na tela:
 # protótipo: saudacao4(16, nome)
 # Tela: <Boa TARDE> <Edson>, seja bem vindo a FIAP
-def saudacao4 (hora , nome):
-    print(f" {hora}, {nome}, seja bem vindo a FIAP")
+
+# def saudacao4 (hora , nome):
+#     print(f" {hora}, {nome}, seja bem vindo a FIAP")
 
 
 # 3. Crie um procedimento chamado "saudacao5" que passe como parâmetro uma HORA e um NOME deixando como padrão
@@ -37,40 +38,115 @@ def saudacao4 (hora , nome):
 # protótipo: prox_num(5)
 # Retorno: 6
 
-def proxnum (num1):
-    print(num1 + 1)
-
-proxnum(5)
+# def proxnum (num1):
+#     print(num1 + 1)
+#
+# proxnum(5)
 
 # 5. Crie uma função que retorne o maior entre dois números passados por parâmetro
 # protótipo: maior_2n(15,98)
 # Retorno: 98
 
-def maiornum2 (num1,num2):
-    print(max(num1,num2))
-
-maiornum2(10,11)
+# def maiornum2 (num1,num2):
+#     print(max(num1,num2))
+#
+# maiornum2(10,11)
 
 # 6. Crie uma função que retorne o maior entre três números passados por parâmetro
 # protótipo: maior_3n(115,23,8)
 # Retorno: 115
 
-def maiornum3 (num1,num2,num3):
-    print(max(num1,num2,num3))
-
-maiornum3(10,11,12)
+# def maiornum3 (num1,num2,num3):
+#     print(max(num1,num2,num3))
+#
+# maiornum3(10,11,12)
 
 # 7. Crie uma função que retorne o próximo numero multiplo 5 tomando como base o que foi passado por parâmetro.
 # protótipo: prox_mult5(13)
 # Retorno: 15
 
-def calc (n):
-    for n in range (n+1):
-        if n % 5 == 0:
-            print(f"{n},é multiplo de 5")
+# def calc (n):
+#     for n in range (n+1):
+#         if n % 5 == 0:
+#             print(f"{n},é multiplo de 5")
+#
+#         else:
+#             print(f"{n}, não é multiplo de 5")
+#
+#
+# calc(16)
 
-        else:
-            print(f"{n}, não é multiplo de 5")
+# listaCheck = []
+# listaSprints = []
+# numeroCheck = 1
+# menorNumero = 11
+# cont = 0
+# mediaSprint = 0
+# soma = 0
+#
+#
+# while cont <= 3:
+#     checkpoints = int(input(f"Digite a nota do checkpoint{numeroCheck}:"))
+#     listaCheck.append(checkpoints)
+#
+#
+#     if cont <= 2:
+#
+#         sprints = int(input(f"Digite a nota do sprint{numeroCheck}:"))
+#         listaSprints.append(sprints)
+#         numeroCheck += 1
+#
+#     for nota in listaCheck:
+#         soma += nota
+#         print(soma)
+#         if nota < menorNumero:
+#             menorNumero = nota
+#
+#         cont += 1
+#
+#         if cont == 2:
+#             globalSolution = int(input("Digite a nota do global solution:"))
+#
+# for numero in listaSprints:
+#     mediaSprint += numero / 2
 
 
-calc(16)
+def peganota ():
+    all_grades = []
+    for i in range (0,6,1):
+        all_grades.append(int(input("Digite as notas do semestre aqui:")))
+
+    return all_grades
+
+
+listaNotas = peganota()
+
+def calculaNota ():
+
+    menorNumero = 11
+
+    soma = 0
+    for i in range (0,3,1):
+
+        soma += listaNotas[i]
+
+        if listaNotas[i] < menorNumero:
+            menorNumero = listaNotas[i]
+
+        calcCheck = (soma - menorNumero) / 2
+
+    return calcCheck
+
+calcula = calculaNota()
+
+print(calculaNota())
+
+
+
+
+
+
+
+
+
+
