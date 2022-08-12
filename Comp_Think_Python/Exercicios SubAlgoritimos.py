@@ -110,36 +110,97 @@
 # for numero in listaSprints:
 #     mediaSprint += numero / 2
 
+def semestre1 ():
+    def peganota ():
+        all_grades = []
+        for i in range (0,6,1):
+            all_grades.append(int(input("Digite as notas do semestre aqui:")))
 
-def peganota ():
-    all_grades = []
-    for i in range (0,6,1):
-        all_grades.append(int(input("Digite as notas do semestre aqui:")))
+        return all_grades
 
-    return all_grades
+    listaNotas = peganota()
+
+    def calculaNota ():
+
+        menorNumero = 11
+
+        soma = 0
+        somasp = 0
+        globalslt = 0
+
+        for checkpoint in range (0,3,1):
+
+            soma += listaNotas[checkpoint]
+
+            if listaNotas[checkpoint] < menorNumero:
+                menorNumero = listaNotas[checkpoint]
+
+            calccheck = (soma - menorNumero) / 2
+
+        for sprint in range (3,5,1):
+
+            somasp += listaNotas[sprint]
+
+            calcsp = somasp / 2
+
+        calcfinal = calcsp + calccheck * 0.4
+
+        for globalsolution in range (5,6):
+
+            globalslt = listaNotas[globalsolution] * 0.6
+
+        media1 = globalslt + calcfinal
+
+        return media1
+
+def semestre2():
+    def peganota():
+        all_grades = []
+        for i in range(0, 6, 1):
+            all_grades.append(int(input("Digite as notas do semestre aqui:")))
+
+        return all_grades
+
+    listaNotas = peganota()
+
+    def calculaNota():
+
+            menorNumero = 11
+
+            soma = 0
+            somasp = 0
+            globalslt = 0
+
+            for checkpoint in range(0, 3, 1):
+
+                soma += listaNotas[checkpoint]
+
+                if listaNotas[checkpoint] < menorNumero:
+                    menorNumero = listaNotas[checkpoint]
+
+                calccheck = (soma - menorNumero) / 2
+
+            for sprint in range(3, 5, 1):
+                somasp += listaNotas[sprint]
+
+                calcsp = somasp / 2
+
+            calcfinal = calcsp + calccheck * 0.4
+
+            for globalsolution in range(5, 6):
+                globalslt = listaNotas[globalsolution] * 0.6
+
+            media2 = globalslt + calcfinal
+
+            return media2
+
+calcula = semestre1()
+calcula2 = semestre2()
+
+print(calcula)
+print(calcula2)
 
 
-listaNotas = peganota()
-
-def calculaNota ():
-
-    menorNumero = 11
-
-    soma = 0
-    for i in range (0,3,1):
-
-        soma += listaNotas[i]
-
-        if listaNotas[i] < menorNumero:
-            menorNumero = listaNotas[i]
-
-        calcCheck = (soma - menorNumero) / 2
-
-    return calcCheck
-
-calcula = calculaNota()
-
-print(calculaNota())
 
 
 
