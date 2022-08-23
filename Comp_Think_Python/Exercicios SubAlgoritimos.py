@@ -110,96 +110,66 @@
 # for numero in listaSprints:
 #     mediaSprint += numero / 2
 
-def semestre1 ():
-    def peganota ():
-        all_grades = []
-        for i in range (0,6,1):
-            all_grades.append(int(input("Digite as notas do semestre aqui:")))
-
-        return all_grades
-
-    listaNotas = peganota()
-
-    def calculaNota ():
-
-        menorNumero = 11
-
-        soma = 0
-        somasp = 0
-        globalslt = 0
-
-        for checkpoint in range (0,3,1):
-
-            soma += listaNotas[checkpoint]
-
-            if listaNotas[checkpoint] < menorNumero:
-                menorNumero = listaNotas[checkpoint]
-
-            calccheck = (soma - menorNumero) / 2
-
-        for sprint in range (3,5,1):
-
-            somasp += listaNotas[sprint]
-
-            calcsp = somasp / 2
-
-        calcfinal = calcsp + calccheck * 0.4
-
-        for globalsolution in range (5,6):
-
-            globalslt = listaNotas[globalsolution] * 0.6
-
-        media1 = globalslt + calcfinal
-
-        return media1
-
-def semestre2():
-    def peganota():
-        all_grades = []
-        for i in range(0, 6, 1):
-            all_grades.append(int(input("Digite as notas do semestre aqui:")))
-
-        return all_grades
-
-    listaNotas = peganota()
-
-    def calculaNota():
-
-            menorNumero = 11
-
-            soma = 0
-            somasp = 0
-            globalslt = 0
-
-            for checkpoint in range(0, 3, 1):
-
-                soma += listaNotas[checkpoint]
-
-                if listaNotas[checkpoint] < menorNumero:
-                    menorNumero = listaNotas[checkpoint]
-
-                calccheck = (soma - menorNumero) / 2
-
-            for sprint in range(3, 5, 1):
-                somasp += listaNotas[sprint]
-
-                calcsp = somasp / 2
-
-            calcfinal = calcsp + calccheck * 0.4
-
-            for globalsolution in range(5, 6):
-                globalslt = listaNotas[globalsolution] * 0.6
-
-            media2 = globalslt + calcfinal
-
-            return media2
-
-calcula = semestre1()
-calcula2 = semestre2()
-
-print(calcula)
-print(calcula2)
-
+"""
+Método de pesquisa sequencial
+PROTÓTIPO: pesquisaMPS(l: lista, elem: float): Boolean
+"""
+def pesquisaMPS(l, elem):
+    encontrou = False
+    for i in range(10):
+        if l[i] == elem:
+            encontrou = True
+            break
+    return (encontrou)
+"""
+Ordena Lista em ordem crescente
+PROTÓTIPO: OrdenaListaCrescente(l: lista): void
+"""
+def ordenaListaCrescente(l):
+    for travado in range(0,9,1):
+        for proximo in range(travado + 1, 10, 1):
+            if l[travado] > l[proximo]:
+                aux = l[travado]
+                l[travado] = l[proximo]
+                l[proximo] = aux
+"""
+Ordena Lista em ordem decrescente
+PROTÓTIPO: OrdenaListaDecrescente(l: lista): void
+"""
+def ordenaListaDecrescente(l):
+    for travado in range(0,9,1):
+        for proximo in range(travado + 1, 10, 1):
+            if l[travado] < l[proximo]:
+                aux = l[travado]
+                l[travado] = l[proximo]
+                l[proximo] = aux
+"""
+Ordena Lista por tipo 1 - Crescente | -1 - Decrescente
+PROTÓTIPO: OrdenaListaTipo(l: lista, tipo: inteiro): void
+"""
+def ordenaListaTipo(l, tipo):
+    if tipo == 1:
+        ordenaListaCrescente(l)
+    else:
+        ordenaListaDecrescente(l)
+"""
+Método de pesquisa Binária
+PROTÓTIPO: pesquisaMPB(l: lista, elem: float): Boolean
+"""
+def pesquisaMPB(l, elem):
+    inicio = 0
+    fim = 9
+    encontrou = False
+    for i in range(inicio, fim + 1, 1):
+        quebra = (inicio + fim) // 2
+        if elem == l[quebra]:
+            encontrou = True
+            break
+        elif elem > l[quebra]:
+            inicio = quebra + 1
+        else:
+            fim = quebra - 1
+    return encontrou
 
 
 
