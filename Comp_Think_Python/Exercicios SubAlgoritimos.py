@@ -110,6 +110,9 @@
 # for numero in listaSprints:
 #     mediaSprint += numero / 2
 
+
+
+
 """
 Método de pesquisa sequencial
 PROTÓTIPO: pesquisaMPS(l: lista, elem: float): Boolean
