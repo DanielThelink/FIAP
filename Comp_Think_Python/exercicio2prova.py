@@ -1,3 +1,8 @@
+# NOME: DANIEL FARIA DE BARROS
+# RA: 94026
+
+
+
 def registerNotes(dados: dict):
 
     print('')
